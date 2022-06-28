@@ -1,0 +1,22 @@
+{
+  "name": "supermarket",
+  "version": "1.0.0",
+  "description": "Test Preparation ",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drnogueira/drnogueira.github.io.git"
+  },
+  "author": "Diego Ramos Nogueira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drnogueira/drnogueira.github.io/issues"
+  },
+  "homepage": "https://github.com/drnogueira/drnogueira.github.io#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

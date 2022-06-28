@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Supermarket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="manifest.json">
+
+    <style>
+        .marcador {
+            background: #fe9d9d;
+            border: 1px solid #f94646;
+        }
+
+        .marcador-container {
+            background: #5bf946;
+            border: 1px solid #36ae26;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <!-- LOGO -->
+        <a href="#" class="navbar-brand p-2">Supermarket</a>
+
+        <!-- MENU HAMBURGUER -->
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-target" aria-expanded="false"
+            aria-controls="#nav-target">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- NAVEGAÇÃO -->
+        <div class="collapse navbar-collapse" id="nav-target">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="" class="nav-link"> Home </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link"> Sobre </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link"> Serviços </a>
+                </li>
+
+                
+                <button class="btn btn-outline-light" id="enable-notifications" type="submit">
+                    Enable Notifications
+                </button>
+
+
+            </ul>
+        </div>
+
+    </nav>
+    <div class="container marcador-container">
+        <div class="row">
+            <h2 class="d-flex justify-content-center">Add product</h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="row">
+                Name
+                <input type="text" placeholder="Name" id="name">
+            </div>
+            <div class="row" >
+                Quantity
+
+                <input type="number" placeholder="Quantity" id="quantity">
+            </div>
+
+            <div class="m-1">
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" onclick="registerList(); insertList()"  >
+                    Add
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div id="div_title">
+                    <h5 class="modal-title" id="modal_title"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modal_content"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-bs-dismiss="modal" id="modal_btn"></button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+    <table>
+        <tbody id="shoppingList" >
+
+        </tbody>
+    </table>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <script src="/src/js/script.js"></script>
+</body>
+
+</html>
